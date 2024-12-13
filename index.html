@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my website</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/all.css">
+</head>
+
+<body>
+    <div class="shell">
+<!--        1.Welcome界面-->
+        <div class="shell-top">
+            <div class="word">
+                <h2>Welcome to</h2>
+                <h2>My website</h2>
+            </div>
+            <img src="../image/background.png" loop autoplay muted></img>
+        </div>
+
+
+<!--        2. About界面-->
+        <div class="shell-main">
+
+            <!--        2.1 导航栏-->
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="./image/logo.jpg" alt="">
+                    <span>Z | My website</span>
+                </div>
+                <ul>
+                    <li><a href="./index.html">ABOUT</a></li>
+                    <li><a href="./album.html">ALBUM</a></li>
+                    <li><a href="./daily.html">DAILY</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                    <li><a href="./login.html">LOGIN</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+
+
+
+<!--            2.2 About详细界面-->
+                <div class="shell-main-header">
+
+<!--                    左侧文本框-->
+                    <div class="shell-main-header-left">
+                        <div class="shell-main-header-left-top">
+                            <h2>Hey</h2>
+                            <span>My name is Zeng Wanxin.
+<!--                                <br />from Zhejiang Normal University</span>-->
+                        </div>
+
+                        <div class="shell-main-header-left-bottom">
+                            <span style="color: rgb(100, 100, 100);">欢迎来到山羊的店铺，在这里，你可以定制网页，设计网页，定制画稿，
+                                定制Logo，购买模板...<br />或许你也可以找我商业合作，接待视频广告和网页广告
+                            </span><br /><br />
+                            <span style="font-family: font;">Welcome to goat's shop, where you can customize web pages,
+                                design web pages, customize drawings, customize logos, and buy templates<br /> maybe you
+                                can also find me for business cooperation to receive video advertising and web
+                                advertising</span>
+                        </div>
+                    </div>
+
+<!--                    右侧图片框-->
+                    <div class="shell-main-header-right"></div>
+                </div>
+
+
+                <div class="shell-main-content">
+                    <div class="shell-main-content-left">
+                        <h2>My favorite <br />song</h2>
+                        <div class="shell-main-content-left-fans">
+                            <ul>
+                                <li><img src="./image/tx(1).jpg" alt=""></li>
+                                <li><img src="./image/tx (2).jpg" alt=""></li>
+                                <li><img src="./image/tx (3).jpg" alt=""></li>
+                                <li><img src="./image/tx (4).jpg" alt=""></li>
+                                <li><img src="./image/tx (5).jpg" alt=""></li>
+                                <li><img src="./image/tx (6).jpg" alt=""></li>
+                                <li><img src="./image/tx (7).jpg" alt=""></li>
+                                <li><img src="./image/tx (8).jpg" alt=""></li>
+                                <li><span>•••
+                                    </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="shell-main-content-right">
+                        <h2>Highly recommended</h2>
+                        <span>La gloire a mes genoux</span>
+                        <img src="./image/fs.jpg" alt="">
+                    </div>
+                </div>
+<!--            2.4 我喜欢的地方的风景-->
+                <div class="shell-main-bottom">
+                    <h2><span>Place</span>I like:</h2>
+                    <div class="shell-main-bottom-bottom">
+                        <ul>
+                            <li>
+                                <img src="./image/sp.jpg" alt="">
+                                <h2>Suzhou:</h2>
+                                <span>I've been there, the scenery of Jiangnan, very charming.</span>
+                            </li>
+                            <li>
+                                <img src="./image/sp2.jpg" alt="">
+                                <h2>Xinjiang:</h2>
+                                <span>Haven't been there yet, it's far from here, but it's beautiful.</span>
+                            </li>
+                            <li>
+                                <img src="./image/sp1.jpg" alt="">
+                                <h2>Yunnan:</h2>
+                                <span>Rizhao Golden Mountain, very magnificent, I haven't been to it yet</span>
+                            </li>
+                            <li>
+                                <img src="./image/sp3.jpg" alt="">
+                                <h2>Hainan:</h2>
+                                <span>I've been there already, the climate is pleasant, very warm, and the sea view is beautiful</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="shell-main-footer">
+                    <span>--my website--</span>
+                </div>
+            </div>
+        </div>
+</body>
+<!-- 引入jquery -->
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+<script>
+
+  // 监听页面的滚动事件，根据滚动位置来动态改变页面上一些元素的 CSS 属性，实现特定的页面滚动交互效果
+    window.addEventListener('scroll', function () {
+        let top = window.scrollY
+        // 获取当前页面在垂直方向上的滚动距离（以像素为单位），并将其赋值给变量 top
+        if (top != 0) {
+            $('.shell-top').css('top', '-100vh')
+            // 将类名为 shell-top 的元素的 top 属性设置为 -100vh，这意味着将该元素向上移出可视区域
+            $('.shell-main').css('top', '0')
+            // 把类名为 shell-main 的元素的 top 属性设为 0，使其置顶显示，改变了页面滚动时该元素的垂直位置，应该是为了调整页面主要内容区域在滚动后的布局呈现。
+
+
+        } else {
+            // 这里做的操作与上面滚动位置非 0 时相反，
+            // 是将页面滚动回顶部时，恢复各个元素的初始状态或者设置为特定的初始样式，
+            // 比如将 shell-top 元素的 top 属性设回 0px 使其回到正常显示位置，
+            // 把 shell-main 元素的 top 属性设为 100vh 使其回到初始的靠下布局位置
+            $('.shell-top').css('top', '0px')
+            $('.shell-main').css('top', '100vh')
+
+        }
+
+        // 根据特定滚动距离显示隐藏元素（自我介绍文本）
+        if (top > 80) {
+            // 当滚动距离大于 100 像素时，
+            // 将这些元素的 opacity（透明度）属性设为 1，使其可见，
+            // 同时通过 transform 中的 translateY(0px) 将它们在垂直方向上归位到正常位置，
+            $('.shell-main-header-left-top').css('opacity', '1')
+            $('.shell-main-header-left-top').css('transform', 'translateY(0px)')
+            $('.shell-main-header-left-bottom').css('opacity', '1')
+            $('.shell-main-header-left-bottom').css('transform', 'translateY(0px)')
+            $('.shell-main-header-left-footer').css('opacity', '1')
+            $('.shell-main-header-left-footer').css('transform', 'translateY(0px)')
+        } else {
+            $('.shell-main-header-left-top').css('opacity', '0')
+            $('.shell-main-header-left-top').css('transform', 'translateY(400px)')
+            $('.shell-main-header-left-bottom').css('opacity', '0')
+            $('.shell-main-header-left-bottom').css('transform', 'translateY(400px)')
+            $('.shell-main-header-left-footer').css('opacity', '0')
+            $('.shell-main-header-left-footer').css('transform', 'translateY(400px)')
+        }
+    })
+
+</script>
+
+</html>

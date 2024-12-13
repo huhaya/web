@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* 整体页面背景设为白色 */
+        body {
+            background-image: url("../website/image/background3.png");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fefdf6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #414d43; /* 深绿色阴影 */
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #submitBtn {
+            background-color: #7c8e7e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button id="submitBtn">Submit</button>
+</div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const submitBtn = document.getElementById('submitBtn');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+
+        submitBtn.addEventListener('click', function (event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+
+            // 验证用户名长度
+            if (username.length < 2 || username.length > 20) {
+                alert('The username must be between 2-20 characters long');
+                return;
+            }
+
+            // 简单验证密码是否包含数字和字符（更严谨的验证可使用正则表达式）
+            let hasNumber = false;
+            let hasLetter = false;
+            for (let char of password) {
+                if (/\d/.test(char)) {
+                    hasNumber = true;
+                } else if (/[a-zA-Z]/.test(char)) {
+                    hasLetter = true;
+                }
+            }
+            if (!hasNumber ||!hasLetter) {
+                alert('The password must contain both numbers and characters');
+                return;
+            }
+
+            // 验证通过后跳转到index.html
+            window.location.href = 'index.html';
+        });
+    });
+</script>
+</html>
