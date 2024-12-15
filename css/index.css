@@ -1,5 +1,3 @@
-/*1. Welcome界面,
-    首页图片和文字*/
 body .shell-top {
   width: 100%;
   height: 100vh;
@@ -11,7 +9,6 @@ body .shell-top {
 body .shell-top img {
   width: 100%;
 }
-/*文字框区域*/
 body .shell-top .word {
   position: absolute;
   left: 50%;
@@ -25,7 +22,6 @@ body .shell-top .word {
   align-items: center;
   flex-direction: column;
 }
-/*欢迎文字*/
 body .shell-top .word h2 {
   font: 100 70px 'font';
   font-weight: bolder;
