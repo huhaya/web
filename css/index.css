@@ -577,15 +577,6 @@ body .shell-main-image-img img:nth-child(3) {
     top: 2px;
   }
 
-  body .shell-main-lbt .button {
-    height: 200px;
-  }
-
-  body .shell-main-lbt .button .button-left,
-  body .shell-main-lbt .button .button-right {
-    line-height: 200px;
-  }
-
   body .shell-main-header {
     flex-wrap: wrap;
     height: 1400px;
@@ -684,19 +675,6 @@ body .shell-main-image-img img:nth-child(3) {
 
   body .shell-top .word h2 {
     font-size: 30px;
-  }
-
-  body .shell-main-lbt .button .button-left,
-  body .shell-main-lbt .button .button-right {
-    width: 10px;
-    font-size: 20px;
-    opacity: .2;
-  }
-  body .shell-main-image{
-    height: 500px;
-  }
-  body .shell-main-lbt{
-    /* height: 300px; */
   }
 }
 
