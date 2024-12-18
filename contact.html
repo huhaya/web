@@ -191,19 +191,16 @@
         var phone = document.getElementById('phone').value;
         var gender = document.getElementById('gender').value;
         var message = document.getElementById('message').value;
-
         // 姓名验证
         if (name.length < 2 || name.length > 20) {
             alert('The name should be between 2 and 20 words');
             return;
         }
-
         // 电话验证
         if (!/^\d{11}$/.test(phone)) {
             alert('The contact number should be 11 digits');
             return;
         }
-
         // 这里可以添加提交表单数据到服务器的代码，此处仅模拟提交成功
         alert('提交成功');
     }

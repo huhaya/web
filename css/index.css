@@ -232,7 +232,7 @@ body .shell-main-header-left-top h2 {
   font-size: 100px;
   transform: translateY(-20px);
 }
-/*？字体，文本简短介绍*/
+/*文本简短介绍*/
 body .shell-main-header-left-top span {
   -webkit-text-fill-color: rgba(0, 0, 0, 0.2);
   -webkit-text-stroke-color: #3aaf88;
@@ -405,7 +405,7 @@ body .shell-main-bottom-bottom::before {
   opacity: 0.8;
   z-index: -999;
 }
-
+/*用于创建动画的关键帧*/
 @keyframes transform {
   0% {
     transform: rotate(30deg);
